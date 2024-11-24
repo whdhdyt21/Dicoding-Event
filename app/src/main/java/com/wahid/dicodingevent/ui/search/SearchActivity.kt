@@ -1,7 +1,6 @@
 package com.wahid.dicodingevent.ui.search
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity

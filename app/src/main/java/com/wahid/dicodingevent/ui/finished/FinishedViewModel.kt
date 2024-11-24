@@ -32,7 +32,7 @@ class FinishedViewModel : ViewModel() {
                     val events = response.body()?.listEvents ?: emptyList()
                     _listEvent.value = events
                     _errorMessage.value = if (events.isEmpty()) "No finished events available." else ""
-                    Log.d(TAG, "Successfully fetched finished events: ${events?.size} items")
+                    Log.d(TAG, "Successfully fetched finished events: ${events.size} items")
                 } else {
                     handleError(response.message())
                 }
