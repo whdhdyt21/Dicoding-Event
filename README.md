@@ -7,41 +7,41 @@ Dicoding Event is an Android application that helps users discover, save, and pa
 - **Finished Events**: Display a list of completed events.
 - **Favorite**: Save your favorite events using Room Database for offline access.
 - **Event Details**: Show detailed information about an event, including:
-    - Event location
-    - Event schedule
-    - Event description
-    - **UI Features**:
-        - **ImageView** for displaying event cover.
-        - **TextView** for event name, organizer name, time, quota, and description.
-        - **FloatingActionButton** for adding the event to favorites.
-        - **Button** for event registration.
-        - **Error Page** with retry functionality.
-        - **ProgressBar** for loading indicator.
+  - Event location
+  - Event schedule
+  - Event description
+  - **UI Features:**
+    - **ImageView** for displaying event cover.
+    - **TextView** for event name, organizer name, time, quota, and description.
+    - **FloatingActionButton** for adding the event to favorites.
+    - **Button** for event registration.
+    - **Error Page** with retry functionality.
+    - **ProgressBar** for loading indicator.
 - **Settings**:
-    - Dark Mode for a more comfortable interface at night.
-    - Daily Reminder to get notified about new events daily.
+  - Dark Mode for a more comfortable interface at night.
+  - Daily Reminder to get notified about new events daily.
 - **Search**: Quickly search for events by keyword.
 
 ## Screenshots
 Here are some screenshots of the Dicoding Event application:
 
-### 1. Upcoming Events Screen
-![Upcoming Events](assets/images/Upcoming.png)
+### 1. Home Screen
+<img src="assets/images/Home.png" width="300"/>
 
-### 2. Finished Events Screen
-![Finished Events](assets/images/Finished.png)
+### 2. Upcoming Events Screen
+<img src="assets/images/Upcoming.png" width="300"/>
 
 ### 3. Favorite Events Screen
-![Favorite Events](assets/images/Favorite.png)
+<img src="assets/images/Favorite.png" width="300"/>
 
-### 4. Home Screen
-![Home Screen](assets/images/Home.png)
+### 4. Finished Events Screen
+<img src="assets/images/Finished.png" width="300"/>
 
 ### 5. Settings Screen
-![Settings](assets/images/Settings.png)
+<img src="assets/images/Settings.png" width="300"/>
 
 ### 6. Search Screen
-![Search](assets/images/Search.png)
+<img src="assets/images/Search.png" width="300"/>
 
 ## Prerequisites
 Before starting this project, ensure you have installed the following tools:
@@ -53,7 +53,7 @@ Before starting this project, ensure you have installed the following tools:
 1. Clone this repository to your computer:
    ```bash
    git clone https://github.com/whdhdyt21/Dicoding-Event.git
-   ```
+    ```
 2. Open the project in Android Studio.
 3. Add the following property to the `local.properties` file located in the root directory:
    ```makefile
