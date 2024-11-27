@@ -13,17 +13,22 @@
     <string name="organizer">Organizer: %1$s</string>
     <string name="time">Time: %1$s</string>
     <string name="search">Search Events</string>
-    <string name="search_event">Search Event</string>
-    <string name="search_hint">Search Events</string>
     <string name="searchbar_hint" tools:ignore="TypographyEllipsis">Search for events...</string>
     <string name="no_results_found">No results found for your search.</string>
-    <string name="search_empty_warning">Please enter a search query.</string>
     <string name="upcoming_events">Upcoming Events</string>
     <string name="finished_events">Finished Events</string>
     <string name="error_image">Error image</string>
     <string name="error_placeholder_text">Error!</string>
     <string name="oops_something_went_wrong">Oops, something went wrong!</string>
     <string name="try_again">Try Again</string>
-    <string name="this_activity">Test</string>
+
+    <string name="title_settings"> Settings</string>
+    <string name="title_favorite">Favorites</string>
+    <string name="add_event_to_favorites">Mark this event as a favorite to access it quickly.</string>
+    <string name="option_dark_mode">Enable Dark Mode</string>
+    <string name="description_enable_dark_mode">Switch to dark mode for a more comfortable viewing experience in low light.</string>
+    <string name="feature_daily_reminder">Set Daily Reminder</string>
+    <string name="description_daily_reminder">Stay updated with daily notifications about your upcoming events.</string>
+    <string name="WM">Made with ❤️ by Wahid Hidayat</string>
 
 </resources>

@@ -1,6 +1,5 @@
 package com.wahid.dicodingevent
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -13,45 +12,46 @@ import com.wahid.dicodingevent.ui.detail.DetailEventActivity
 import com.wahid.dicodingevent.ui.utils.loadImage
 
 class ListEventAdapter(
-    private var listEvent: List<ListEventsItem>,
+    private val listEvent: List<ListEventsItem>,
     private val horizontal: Boolean = false
 ) : RecyclerView.Adapter<ListEventAdapter.ListViewHolder>() {
 
-    class ListViewHolder(var binding: ViewBinding) : RecyclerView.ViewHolder(binding.root)
+    inner class ListViewHolder(val binding: ViewBinding) : RecyclerView.ViewHolder(binding.root) {
+        fun bind(data: ListEventsItem) {
+            when (binding) {
+                is HorizontalRowEventBinding -> {
+                    binding.cardTitle.text = data.name
+                    binding.cardCover.loadImage(data.imageLogo)
+                }
+                is ItemRowEventBinding -> {
+                    binding.cardTitle.text = data.name
+                    binding.cardSummary.text = data.summary
+                    binding.cardCover.loadImage(data.imageLogo)
+                }
+            }
+
+            itemView.setOnClickListener {
+                val context = itemView.context
+                val intent = Intent(context, DetailEventActivity::class.java).apply {
+                    putExtra(DetailEventActivity.EXTRA_EVENT_ID, data.id)
+                }
+                context.startActivity(intent)
+            }
+        }
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
+        val inflater = LayoutInflater.from(parent.context)
         val binding = if (horizontal) {
-            HorizontalRowEventBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            HorizontalRowEventBinding.inflate(inflater, parent, false)
         } else {
-            ItemRowEventBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            ItemRowEventBinding.inflate(inflater, parent, false)
         }
         return ListViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val data = listEvent[position]
-        if (horizontal) {
-            val binding = holder.binding as HorizontalRowEventBinding
-            binding.cardTitle.text = data.name
-            binding.cardCover.loadImage(data.imageLogo)
-        } else {
-            val binding = holder.binding as ItemRowEventBinding
-            binding.cardTitle.text = data.name
-            binding.cardSummary.text = data.summary
-            binding.cardCover.loadImage(data.imageLogo)
-        }
-
-        holder.itemView.setOnClickListener {
-            val intent = Intent(holder.itemView.context, DetailEventActivity::class.java)
-            intent.putExtra(DetailEventActivity.EXTRA_EVENT_ID, data.id)
-            holder.itemView.context.startActivity(intent)
-        }
-    }
-
-    @SuppressLint("NotifyDataSetChanged")
-    fun updateEvents(list: List<ListEventsItem>) {
-        listEvent = list
-        notifyDataSetChanged()
+        holder.bind(listEvent[position])
     }
 
     override fun getItemCount(): Int = listEvent.size

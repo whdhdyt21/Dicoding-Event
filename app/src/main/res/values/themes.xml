@@ -1,4 +1,4 @@
 <resources>
-    <style name="Theme.DicodingEvent" parent="Theme.Material3.DayNight">
+    <style name="Theme.DicodingEvent" parent="Theme.Material3.DynamicColors.Light">
     </style>
 </resources>

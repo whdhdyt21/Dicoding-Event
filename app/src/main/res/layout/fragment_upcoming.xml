@@ -70,6 +70,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:paddingBottom="80dp"
         tools:listitem="@layout/item_row_event" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
