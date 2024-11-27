@@ -72,4 +72,3 @@ Contributions are welcome! If you have ideas or improvements, follow these steps
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
-```
