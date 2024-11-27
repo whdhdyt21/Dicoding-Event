@@ -1,7 +1,10 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("kotlin-parcelize")
+    id("com.google.devtools.ksp") version "2.0.21-1.0.26"
 }
 
 android {
@@ -9,6 +12,10 @@ android {
     compileSdk = 35
 
     defaultConfig {
+        val properties = Properties()
+        properties.load(rootProject.file("local.properties").inputStream())
+        buildConfigField("String", "BASE_URL", properties.getProperty("BASE_URL"))
+
         applicationId = "com.wahid.dicodingevent"
         minSdk = 30
         //noinspection OldTargetApi
@@ -34,12 +41,13 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
+
     buildFeatures {
         viewBinding = true
         buildConfig = true
@@ -70,4 +78,13 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+//    Room
+    implementation(libs.androidx.datastore.preferences)
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.androidx.work.runtime)
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
 }
