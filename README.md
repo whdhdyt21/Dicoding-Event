@@ -1,96 +1,107 @@
 # Dicoding Event
 
-Dicoding Event is an Android application that helps users discover, save, and participate in various exciting events available on the Dicoding platform. The app is equipped with features to provide an optimal user experience.
+**Dicoding Event** is an Android application designed to help users discover, save, and participate in various events hosted on the Dicoding platform. The app offers a seamless user experience with features tailored to enhance event discovery and participation.
 
-## Key Features
-- **Upcoming Events**: Display a list of upcoming events.
-- **Finished Events**: Display a list of completed events.
-- **Favorite**: Save your favorite events using Room Database for offline access.
-- **Event Details**: Show detailed information about an event, including:
-  - Event location
-  - Event schedule
-  - Event description
-  - **UI Features:**
-    - **ImageView** for displaying event cover.
-    - **TextView** for event name, organizer name, time, quota, and description.
-    - **FloatingActionButton** for adding the event to favorites.
+---
+
+## 🚀 Key Features
+- **Upcoming Events**: View a list of upcoming events.
+- **Finished Events**: Explore completed events.
+- **Favorites**: Save favorite events for offline access using Room Database.
+- **Event Details**:
+  - Comprehensive information about each event, including:
+    - Location
+    - Schedule
+    - Description
+  - **UI Features**:
+    - **ImageView** for event cover.
+    - **TextView** for event details (name, organizer, time, quota, and description).
+    - **FloatingActionButton** to add events to favorites.
     - **Button** for event registration.
     - **Error Page** with retry functionality.
-    - **ProgressBar** for loading indicator.
+    - **ProgressBar** for loading indicators.
 - **Settings**:
-  - Dark Mode for a more comfortable interface at night.
-  - Daily Reminder to get notified about new events daily.
-- **Search**: Quickly search for events by keyword.
+  - Dark Mode for a comfortable viewing experience at night.
+  - Daily Reminder for notifications about new events.
+- **Search**: Quickly find events by keyword.
 
-## Screenshots
-Here are some screenshots of the Dicoding Event application:
+---
 
-### 1. Home Screen
+## 📸 Screenshots
+
+### Home Screen
 <img src="assets/images/Home.png" width="300"/>
 
-### 2. Upcoming Events Screen
+### Upcoming Events Screen
 <img src="assets/images/Upcoming.png" width="300"/>
 
-### 3. Favorite Events Screen
+### Favorite Events Screen
 <img src="assets/images/Favorite.png" width="300"/>
 
-### 4. Finished Events Screen
+### Finished Events Screen
 <img src="assets/images/Finished.png" width="300"/>
 
-### 5. Settings Screen
+### Settings Screen
 <img src="assets/images/Settings.png" width="300"/>
 
-### 6. Search Screen
+### Search Screen
 <img src="assets/images/Search.png" width="300"/>
 
-## Prerequisites
-Before starting this project, ensure you have installed the following tools:
-- **Android Studio** (at least version Arctic Fox or newer)
-- Latest **Gradle version**
+---
+
+## ⚙️ Initial Setup
+
+### Prerequisites
+Before starting, ensure you have the following:
+- **Android Studio** (Arctic Fox or newer)
+- Latest **Gradle** version
 - **Java Development Kit (JDK)** version 11 or newer
 
-## Initial Setup
-1. Clone this repository to your computer:
+### Installation
+1. Clone the repository:
    ```bash
    git clone https://github.com/whdhdyt21/Dicoding-Event.git
-    ```
-2. Open the project in Android Studio.
-3. Add the following property to the `local.properties` file located in the root directory:
-   ```makefile
-   BASE_URL = "https://event-api.dicoding.dev/"
    ```
-   The `local.properties` file is used to store sensitive local configurations and will not be committed to Git.
+2. Open the project in Android Studio.
+3. Configure the `local.properties` file by adding the following:
+   ```properties
+   BASE_URL=https://event-api.dicoding.dev/
+   ```
+   > **Note:** The `local.properties` file stores sensitive local configurations and is excluded from version control.
 
-## Technologies Used
-- **Kotlin**: Main programming language for app development.
-- **MVVM Architecture**: To separate business logic from the user interface.
-- **Retrofit**: For communication with the REST API.
-- **Room Database**: For local data storage.
-- **LiveData and ViewModel**: For efficient data management.
-- **WorkManager**: For daily reminder notifications.
-- **Material Design**: To create a modern and responsive user interface.
+4. Build and run the application in Android Studio.
 
-## How to Run the Project
-1. Ensure all prerequisites are installed, and the `local.properties` file is configured.
-2. Build and run the project from Android Studio.
-3. The application will connect to the **Dicoding Event API** available at `https://event-api.dicoding.dev/`.
+---
 
-## Contribution
-Contributions are welcome! If you have ideas or improvements, follow these steps:
+## 🛠️ Technologies Used
+- **Kotlin**: Main programming language for development.
+- **MVVM Architecture**: Ensures separation of concerns for better maintainability.
+- **Retrofit**: Handles REST API communication.
+- **Room Database**: Manages local storage of favorite events.
+- **LiveData & ViewModel**: Provides reactive and lifecycle-aware data management.
+- **WorkManager**: Schedules daily reminder notifications.
+- **Material Design**: Delivers a modern and user-friendly interface.
+
+---
+
+## 🤝 Contribution
+Contributions are welcome! If you’d like to improve the project, follow these steps:
 1. Fork this repository.
-2. Create a new branch for your feature or fix:
+2. Create a feature branch:
    ```bash
-   git checkout -b new-feature
+   git checkout -b feature/your-feature-name
    ```
 3. Commit your changes:
    ```bash
-   git commit -m "Add new feature"
+   git commit -m "Add feature: your-feature-name"
    ```
-4. Push to your branch:
+4. Push the branch:
    ```bash
-   git push origin new-feature
+   git push origin feature/your-feature-name
    ```
 5. Open a pull request on GitHub.
 
-## License
+---
+
+## 📜 License
 This project is licensed under the [MIT License](LICENSE).
